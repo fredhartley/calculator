@@ -23,9 +23,9 @@ function operate(operator, inputOne, inputTwo) {
         case '-': 
             return subtract(inputOne, inputTwo);
         case '*':
-            multiply(inputOne, inputTwo);
+            return multiply(inputOne, inputTwo);
         case '/':
-            divide(inputOne, inputTwo);
+            return divide(inputOne, inputTwo);
 }
 }
 
