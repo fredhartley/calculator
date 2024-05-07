@@ -2,6 +2,18 @@ body {
   background-color: #f1f3f4;
 }
 
+.calculator {
+  border: 1px black solid;
+  border-radius: 10px 10px 35px 35px;
+  background-color: #262629;
+  height: 600px;
+  width: 340px;
+}
+
+.calculator img {
+  height: 20px;
+}
+
 .calculator__display {
   border: 1px black solid;
   background-color: #bcbeb0;
