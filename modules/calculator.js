@@ -1,32 +1,36 @@
+function precise(x) {
+  return x.toPrecision(8);
+}
+
 function addition(a, b) {
-    return a + b;
+  return precise(a + b);
 }
 function subtract(a, b) {
-    return a - b;
+  return precise(a - b);
 }
 
 function multiply(a, b) {
-    return a * b;
+  return precise(a * b);
 }
 
 function divide(a, b) {
-    if (b === 0 && a === 0) {
-        return 0;
-    }
-    return a / b;
+  if (b === 0 && a === 0) {
+    return 0;
+  }
+  return precise(a / b);
 }
 
 function operate(operator, inputOne, inputTwo) {
-    switch (operator) {
-        case '+': 
-            return addition(inputOne, inputTwo);
-        case '-': 
-            return subtract(inputOne, inputTwo);
-        case '*':
-            return multiply(inputOne, inputTwo);
-        case '/':
-            return divide(inputOne, inputTwo);
-}
+  switch (operator) {
+    case "+":
+      return addition(inputOne, inputTwo);
+    case "-":
+      return subtract(inputOne, inputTwo);
+    case "x":
+      return multiply(inputOne, inputTwo);
+    case "÷":
+      return divide(inputOne, inputTwo);
+  }
 }
 
-export { addition, subtract, multiply, divide, operate }
+export { addition, subtract, multiply, divide, operate };
