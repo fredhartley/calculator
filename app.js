@@ -11,12 +11,11 @@ const display = document.querySelector(".calculator__display");
 
 let currentOperand1 = "";
 let currentOperand2 = "";
-let evaluatedOperand = "";
 let currentOperator = null;
 
 clearButton.addEventListener("click", clear);
 equalsButton.addEventListener("click", evaluate);
-pointButton.addEventListener("click", decimal);
+pointButton.addEventListener("click", () => decimal(pointButton));
 
 numberButtons.forEach(function (button) {
   button.addEventListener("click", () => numberButtonLogic(button));
@@ -31,12 +30,12 @@ function numberButtonLogic(button) {
   if (currentOperand1.length > 0 && currentOperator !== null) {
     currentOperand2 += button.textContent;
     display.textContent = currentOperand2;
-    console.log(currentOperand2);
+    console.log(`currentOperand2 is: ${currentOperand2}`);
     // if currentOperand1 has no value, then add to currentOperand1
   } else {
     currentOperand1 += button.textContent;
     display.textContent = currentOperand1;
-    console.log(currentOperand1);
+    console.log(`currentOperand1 is: ${currentOperand1}`);
   }
 }
 
@@ -55,7 +54,9 @@ function clear() {
   display.textContent = "";
   currentOperand1 = "";
   currentOperand2 = "";
-  evaluatedOperand = "";
+  currentOperator = null;
+  console.log(`currentOperand1 is: ${currentOperand1}`);
+  console.log(`currentOperand2 is: ${currentOperand2}`);
 }
 
 function evaluate() {
@@ -78,21 +79,23 @@ function evaluate() {
   currentOperand2 = "";
 }
 
-function decimal() {
+function decimal(button) {
   // add to currentoperand1
   if (
     !currentOperand1.includes(".") &&
     currentOperand1.length > 0 &&
     currentOperand2 === ""
   ) {
-    currentOperand1 += ".";
+    currentOperand1 += button.textContent;
     display.textContent = currentOperand1;
+    console.log(`currentOperand1 is: ${currentOperand1}`);
   } else if (
     !currentOperand2.includes(".") &&
     currentOperand2.length > 0 &&
     currentOperand1.length > 0
   ) {
-    currentOperand2 += ".";
+    currentOperand2 += button.textContent;
     display.textContent = currentOperand2;
+    console.log(`currentOperand2 is: ${currentOperand2}`);
   }
 }

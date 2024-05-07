@@ -3,21 +3,21 @@ function precise(x) {
 }
 
 function addition(a, b) {
-  return precise(a + b);
+  return a + b;
 }
 function subtract(a, b) {
-  return precise(a - b);
+  return a - b;
 }
 
 function multiply(a, b) {
-  return precise(a * b);
+  return a * b;
 }
 
 function divide(a, b) {
   if (b === 0 && a === 0) {
     return 0;
   }
-  return precise(a / b);
+  return a / b;
 }
 
 function operate(operator, inputOne, inputTwo) {

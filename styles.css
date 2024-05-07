@@ -1,6 +1,10 @@
-.calculator__display {
-    border: 1px black solid;
-    height: 30px;
-    width: 90px;
+body {
+  background-color: #f1f3f4;
+}
 
+.calculator__display {
+  border: 1px black solid;
+  background-color: #bcbeb0;
+  height: 30px;
+  width: 90px;
 }
