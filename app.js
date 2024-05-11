@@ -7,7 +7,7 @@ const operatorButtons = document.querySelectorAll(
 const clearButton = document.querySelector("button.calculator__clear");
 const equalsButton = document.querySelector("button.calculator__equals");
 const pointButton = document.querySelector("button.calculator__point");
-const display = document.querySelector(".calculator__display");
+const display = document.querySelector(".display");
 
 let currentOperand1 = "";
 let currentOperand2 = "";
