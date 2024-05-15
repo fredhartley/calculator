@@ -61,6 +61,23 @@ body {
   color: #444445;
 }
 
+.display--off {
+  background-color: #bcbeb0;
+  height: 70%;
+  width: 85%;
+  border-radius: 10px;
+  -webkit-box-shadow: inset -2px 3px 9px 0px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: inset -2px 3px 9px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: inset -2px 3px 9px 0px rgba(0, 0, 0, 0.41);
+  font-family: "Segment7-4Gml";
+  font-size: 32px;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 16px;
+  letter-spacing: 0.4rem;
+  color: #bcbeb0;
+}
+
 .outer-display {
   background-color: #898a86;
   height: 80px;

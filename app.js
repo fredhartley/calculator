@@ -4,10 +4,17 @@ const numberButtons = document.querySelectorAll("button.calculator__number");
 const operatorButtons = document.querySelectorAll(
   "button.calculator__operator"
 );
+
 const clearButton = document.querySelector("button.calculator__clear");
 const equalsButton = document.querySelector("button.calculator__equals");
 const pointButton = document.querySelector("button.calculator__point");
 const display = document.querySelector(".display");
+
+const buttonSound = new Audio("sounds/button-sound-trimmed.mp3");
+const allButtons = document.querySelectorAll(".calculator-grid__item");
+
+const calculatorOff = document.querySelector(".calculator__off");
+const calculatorOn = document.querySelector(".calculator__on");
 
 let currentOperand1 = "";
 let currentOperand2 = "";
@@ -99,3 +106,25 @@ function decimal(button) {
     console.log(`currentOperand2 is: ${currentOperand2}`);
   }
 }
+
+allButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    buttonSound.play();
+  });
+});
+
+calculatorOff.addEventListener("click", () => {
+  if (display.classList.contains("display")) {
+    display.classList.remove("display");
+    display.classList.add("display--off");
+    clear();
+  }
+});
+
+calculatorOn.addEventListener("click", () => {
+  if (display.classList.contains("display--off")) {
+    display.classList.remove("display--off");
+    display.classList.add("display");
+    clear();
+  }
+});
