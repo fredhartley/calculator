@@ -33,8 +33,11 @@ operatorButtons.forEach(function (button) {
 });
 
 function numberButtonLogic(button) {
+  if (display.textContent.length > 7) {
+    console.log(`Number limit`);
+  }
   // currentOperand1 has value, then add to currentOperand2
-  if (currentOperand1.length > 0 && currentOperator !== null) {
+  else if (currentOperand1.length > 0 && currentOperator !== null) {
     currentOperand2 += button.textContent;
     display.textContent = currentOperand2;
     console.log(`currentOperand2 is: ${currentOperand2}`);
@@ -111,6 +114,14 @@ allButtons.forEach((button) => {
   button.addEventListener("click", () => {
     buttonSound.play();
   });
+});
+
+calculatorOn.addEventListener("click", () => {
+  buttonSound.play();
+});
+
+calculatorOff.addEventListener("click", () => {
+  buttonSound.play();
 });
 
 calculatorOff.addEventListener("click", () => {

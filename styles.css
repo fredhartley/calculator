@@ -48,6 +48,7 @@ body {
   background-color: #bcbeb0;
   height: 70%;
   width: 85%;
+  max-width: 85%;
   border-radius: 10px;
   -webkit-box-shadow: inset -2px 3px 9px 0px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: inset -2px 3px 9px 0px rgba(0, 0, 0, 0.41);
@@ -57,7 +58,8 @@ body {
   text-align: right;
   box-sizing: border-box;
   padding: 16px;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.45rem;
+  overflow: hidden; /* Hide the overflowed text */
   color: #444445;
 }
 
